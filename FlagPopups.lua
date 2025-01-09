@@ -7,7 +7,7 @@ Types["System.Windows.Forms.MessageBoxButtons"] = luanet.import_type("System.Win
 Types["System.Windows.Forms.DialogResult"] = luanet.import_type("System.Windows.Forms.DialogResult");
 Types["log4net.LogManager"] = luanet.import_type("log4net.LogManager");
 
-local log = Types["log4net.LogManager"].GetLogger("AtlasSystems.Addons.DisplayFlags");
+local log = Types["log4net.LogManager"].GetLogger("AtlasSystems.Addons.FlagPopups");
 
 local Settings = {};
 Settings.BorrowingCheckInFromLenderEnabled = GetSetting("BorrowingCheckInFromLenderEnabled");
