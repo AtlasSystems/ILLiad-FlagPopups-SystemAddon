@@ -70,7 +70,10 @@ function HandleFlags()
 	local dialogResult = Types["System.Windows.Forms.DialogResult"];
 
 	for i = 1, #flagNames do
-		local flagNameToMatch = flagNames[i]:lower();
+		-- Enclose name in quotes to ensure full name matches, on the off chance one flag name is contained within another.
+		-- This also reduces the number of loops we need to search for matches since we can use string:find() directly on the 
+		-- setting lists rather than looping through multiple tables.
+		local flagNameToMatch = '"' .. flagNames[i]:lower() .. '"';
 
 		local removalMessage;
 
