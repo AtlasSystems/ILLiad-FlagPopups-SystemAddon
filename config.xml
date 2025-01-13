@@ -5,7 +5,7 @@
   <Version>1.0.0</Version>
   <Active>True</Active>
   <Type>System</Type>
-  <Description>System addon that displays flags in dialog boxes during various system processes. This addon works best with Auto Process toggled on for the processes where it is available, since a dialog box displays for each transaction. If batch processing is used, the pop-ups will display all at once after Process Queue is clicked. The transaction number for each request is still displayed in each dialog box. Please note that only one system addon can register for each system event handler, and as such this addon will conflict with other system addons that use the same event handlers such as Alma NCIP System Integration.
+  <Description>System addon that displays flags in dialog boxes during various system events. This addon works best with Auto Process toggled on for the events where it is available, since a dialog box displays for each transaction. If batch processing is used, the pop-ups will display all at once after Process Queue is clicked. The transaction number for each request is still displayed in each dialog box. Please note that only one system addon can register for each system event handler, and as such this addon will conflict with other system addons that use the same event handlers such as Alma NCIP System Integration.
   
   The ILLiad client must be restarted for any changes to this addon's settings to take effect.</Description>
   <Permissions />
