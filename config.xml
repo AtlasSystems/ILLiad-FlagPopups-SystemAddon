@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Flag Pop-ups</Name>
+  <Author>Atlas Systems, Inc.</Author>
+  <Version>1.0.0</Version>
+  <Active>True</Active>
+  <Type>System</Type>
+  <Description>System addon that displays flags in dialog boxes during various system events. This addon works best with Auto Process toggled on for the events where it is available, since a dialog box displays for each transaction. If batch processing is used, the pop-ups will display all at once after Process Queue is clicked. The transaction number for each request is still displayed in each dialog box. Please note that only one system addon can register for each system event handler, and as such this addon will conflict with other system addons that use the same event handlers such as Alma NCIP System Integration.
+  
+  The ILLiad client must be restarted for any changes to this addon's settings to take effect.</Description>
+  <Permissions />
+  <Settings>
+    <Setting name="BorrowingCheckInFromLenderEnabled" value="false" type="boolean">
+      <Description>Determines whether this addon runs when items are checked in from the lender in borrowing.</Description>
+    </Setting>
+    <Setting name="BorrowingCheckInFromCustomerEnabled" value="false" type="boolean">
+      <Description>Determines whether this addon runs when items are checked in from the patron in borrowing.</Description>
+    </Setting>
+    <Setting name="DocumentDeliveryMarkFoundEnabled" value="false" type="boolean">
+      <Description>Determines whether this addon runs when items are marked found in document delivery.</Description>
+    </Setting>
+    <Setting name="LendingMarkFoundEnabled" value="false" type="boolean">
+      <Description>Determines whether this addon runs when items are marked found in lending.</Description>
+    </Setting>
+    <Setting name="LendingReturnsEnabled" value="false" type="boolean">
+      <Description>Determines whether this addon runs when items are returned in lending.</Description>
+    </Setting>
+    <Setting name="FlagsToDisplay" value="" type="string">
+      <Description>A comma-separated list of flags to display pop-up messages for when performing an action. Can include system flags.</Description>
+    </Setting>
+    <Setting name="FlagsToRemove" value="" type="string">
+      <Description>A comma-separated list of custom flags that should be automatically removed after performing an action. These flags will be removed even if they are not listed in the FlagsToDisplay setting.</Description>
+    </Setting>
+    <Setting name="FlagsToChoose" value="" type="string">
+      <Description>A comma-separated list of custom flags that should display a pop-up with the option to keep remove the flag when performing an action. These flags do not need to be listed in the FlagsToDisplay setting.</Description>
+    </Setting>
+  </Settings>
+  <Files>
+    <File>FlagPopups.lua</File>
+  </Files>
+</Configuration>
